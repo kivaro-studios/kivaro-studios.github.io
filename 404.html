@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07111f">
+  <title>Kivaro Studios</title>
+  <meta name="description" content="Kivaro Studios">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>(function(){try{var stored=localStorage.getItem("kivaro-theme");var theme=stored||(window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");document.documentElement.dataset.theme=theme;}catch(e){document.documentElement.dataset.theme="dark";}})();</script>
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+</head>
+<body data-page="notfound">
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html" data-i18n-aria-label="aria.brandHome">
+        <span class="brand-mark" aria-hidden="true">
+          <img src="assets/img/kivaro-logo.png" alt=""/>
+        </span>
+        <span class="brand-text"><strong>Kivaro Studios</strong></span>
+      </a>
+      <nav class="nav" data-nav data-i18n-aria-label="aria.mainNavigation">
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="services.html" data-i18n="nav.services">Servizi</a>
+        <a href="projects.html" data-i18n="nav.projects">Progetti</a>
+        <a href="about.html" data-i18n="nav.about">Chi siamo</a>
+        <a href="labs.html" data-i18n="nav.labs">Labs</a>
+        <a href="contact.html" data-i18n="nav.contact">Contatti</a>
+      </nav>
+      <div class="header-actions">
+        <div class="segmented-control" data-theme-switch data-i18n-aria-label="aria.themeSwitch">
+          <button type="button" data-theme-option="light"><span data-i18n="controls.theme.light">Chiaro</span></button>
+          <button type="button" data-theme-option="dark"><span data-i18n="controls.theme.dark">Scuro</span></button>
+        </div>
+        <div class="segmented-control" data-lang-switch data-i18n-aria-label="aria.languageSwitch">
+          <button type="button" data-lang-option="it"><span data-i18n="controls.lang.it">IT</span></button>
+          <button type="button" data-lang-option="en"><span data-i18n="controls.lang.en">EN</span></button>
+        </div>
+      </div>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" data-i18n-aria-label="aria.openMenu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 7H20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M4 12H20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M4 17H20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+  <main>
+    <section class="section"><div class="container card center stack"><span class="eyebrow centered-eyebrow" data-i18n="notfound.eyebrow">Errore 404</span><h1 class="section-title full-width" data-i18n="notfound.title">Questa pagina non esiste oppure è stata spostata.</h1><p class="section-subtitle centered-subtitle" data-i18n="notfound.subtitle">Puoi tornare alla home o visitare la pagina progetti per continuare la navigazione.</p><div class="button-row center-buttons"><a class="btn btn-primary" href="index.html" data-i18n="notfound.primary">Torna alla home</a><a class="btn btn-secondary" href="projects.html" data-i18n="notfound.secondary">Apri i progetti</a></div></div></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer-grid">
+      <div class="stack">
+        <a class="brand" href="index.html">
+          <span class="brand-mark" aria-hidden="true">
+          <img src="assets/img/kivaro-logo.png" alt=""/>
+        </span>
+          <span class="brand-text"><strong>Kivaro Studios</strong><span data-i18n="common.buildDesignIterate">Build, design, iterate.</span></span>
+        </a>
+        <p data-i18n="common.footerDescription">Studio indipendente di sviluppo software focalizzato su prodotti digitali, strumenti su misura e prototipi con una forte attenzione a qualità, chiarezza e design.</p>
+      </div>
+      <div>
+        <h3 data-i18n="common.explore">Esplora</h3>
+        <ul class="list-clean stack small">
+          <li><a href="services.html" data-i18n="common.services">Servizi</a></li>
+          <li><a href="projects.html" data-i18n="common.projects">Progetti</a></li>
+          <li><a href="labs.html" data-i18n="common.labs">Labs</a></li>
+          <li><a href="privacy.html" data-i18n="common.privacy">Privacy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 data-i18n="common.contacts">Contatti</h3>
+        <ul class="list-clean stack small">
+          <li><a href="mailto:kivaro.studios@gmail.com">kivaro.studios@gmail.com</a></li>
+          <li><a href="contact.html" data-i18n="common.requestInfo">Richiedi informazioni</a></li>
+          <li>© <span data-current-year></span> Kivaro Studios</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/site-data.js"></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
