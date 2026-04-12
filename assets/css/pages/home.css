@@ -1,0 +1,25 @@
+.feature-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: var(--space-5);
+}
+.process-step {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.process-step-number {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  background: color-mix(in srgb, var(--primary) 10%, transparent);
+  color: var(--primary);
+  border: 1px solid color-mix(in srgb, var(--primary) 18%, transparent);
+}
+@media (max-width: 960px) {
+  .feature-grid { grid-template-columns: 1fr; }
+}
