@@ -1,0 +1,19 @@
+.release-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.download-card {
+  position: sticky;
+  top: calc(var(--header-height) + 1rem);
+}
+.hash-text {
+  word-break: break-all;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.86rem;
+}
+@media (max-width: 960px) {
+  .download-card { position: static; }
+}
