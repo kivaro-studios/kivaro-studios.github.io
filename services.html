@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07111f">
+  <title>Kivaro Studios</title>
+  <meta name="description" content="Kivaro Studios">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>(function(){try{var stored=localStorage.getItem("kivaro-theme");var theme=stored||(window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");document.documentElement.dataset.theme=theme;}catch(e){document.documentElement.dataset.theme="dark";}})();</script>
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+</head>
+<body data-page="services">
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html" data-i18n-aria-label="aria.brandHome">
+        <span class="brand-mark" aria-hidden="true">
+          <img src="assets/img/kivaro-logo.png" alt=""/>
+        </span>
+        <span class="brand-text"><strong>Kivaro Studios</strong></span>
+      </a>
+      <nav class="nav" data-nav data-i18n-aria-label="aria.mainNavigation">
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="services.html" data-i18n="nav.services">Servizi</a>
+        <a href="projects.html" data-i18n="nav.projects">Progetti</a>
+        <a href="about.html" data-i18n="nav.about">Chi siamo</a>
+        <a href="labs.html" data-i18n="nav.labs">Labs</a>
+        <a href="contact.html" data-i18n="nav.contact">Contatti</a>
+      </nav>
+      <div class="header-actions">
+        <div class="segmented-control" data-theme-switch data-i18n-aria-label="aria.themeSwitch">
+          <button type="button" data-theme-option="light"><span data-i18n="controls.theme.light">Chiaro</span></button>
+          <button type="button" data-theme-option="dark"><span data-i18n="controls.theme.dark">Scuro</span></button>
+        </div>
+        <div class="segmented-control" data-lang-switch data-i18n-aria-label="aria.languageSwitch">
+          <button type="button" data-lang-option="it"><span data-i18n="controls.lang.it">IT</span></button>
+          <button type="button" data-lang-option="en"><span data-i18n="controls.lang.en">EN</span></button>
+        </div>
+      </div>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" data-i18n-aria-label="aria.openMenu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 7H20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M4 12H20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M4 17H20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+  <main>
+
+<section class="page-hero"><div class="container"><span class="eyebrow" data-i18n="services.eyebrow">Servizi</span><h1 class="section-title" data-i18n="services.title">Dalla progettazione dell’architettura allo sviluppo completo.</h1><p class="section-subtitle" data-i18n="services.subtitle">Kivaro Studios non si occupa solo di siti web: progetta, documenta e sviluppa software desktop, sistemi full-stack, interfacce, videogiochi e sperimentazioni tecniche.</p></div></section>
+<section class="section-sm">
+  <div class="container grid three-col">
+    <article class="card stack"><h2 data-i18n="services.s1Title">Analisi, architettura e documentazione</h2><p data-i18n="services.s1Text">Studio del problema, definizione della struttura del progetto, modellazione dei dati, documentazione funzionale e tecnica, wireframe e prototipi iniziali.</p><ul class="list-check"><li data-i18n="services.s1L1">Analisi requisiti e flussi</li><li data-i18n="services.s1L2">Progettazione database e struttura software</li><li data-i18n="services.s1L3">Documentazione di progetto e prototipi</li></ul></article>
+    <article class="card stack"><h2 data-i18n="services.s2Title">Sviluppo desktop e backend</h2><p data-i18n="services.s2Text">Applicazioni desktop, tool operativi, automazioni e logiche di backend pensate per gestire dati, processi aziendali e flussi interni.</p><ul class="list-check"><li data-i18n="services.s2L1">Desktop app e strumenti locali</li><li data-i18n="services.s2L2">CRUD, dati tabellari, import/export</li><li data-i18n="services.s2L3">Servizi, API e logica applicativa</li></ul></article>
+    <article class="card stack"><h2 data-i18n="services.s3Title">Frontend, web e full-stack</h2><p data-i18n="services.s3Text">Siti statici, landing page, web app e interfacce responsive con attenzione a struttura, esperienza utente, performance e integrazione col backend.</p><ul class="list-check"><li data-i18n="services.s3L1">HTML, CSS, JS e UI responsive</li><li data-i18n="services.s3L2">Frontend moderno e integrazione dati</li><li data-i18n="services.s3L3">Soluzioni leggere o più articolate</li></ul></article>
+    <article class="card stack"><h2 data-i18n="services.s4Title">Game development e multimedia</h2><p data-i18n="services.s4Text">Progettazione di videogiochi, siti multimediali, gameplay systems, worldbuilding, UI di gioco e supporto visivo/artistico per esperienze interattive.</p><ul class="list-check"><li data-i18n="services.s4L1">Unity, Godot e prototipi di gameplay</li><li data-i18n="services.s4L2">Game design, lore e content structure</li><li data-i18n="services.s4L3">Arte 2D, asset e presentazione</li></ul></article>
+    <article class="card stack"><h2 data-i18n="services.s5Title">Robotica ed elettronica digitale</h2><p data-i18n="services.s5Text">Sperimentazioni e progetti che uniscono software, logica, microcontrollori, elettronica e sistemi interattivi legati all’ambito maker e tecnico.</p><ul class="list-check"><li data-i18n="services.s5L1">Robotica educativa e prototipi</li><li data-i18n="services.s5L2">Arduino, logica ed elettronica digitale</li><li data-i18n="services.s5L3">Approccio integrato hardware/software</li></ul></article>
+  </div>
+</section>
+<section class="section-sm">
+  <div class="container grid two-col">
+    <div class="card stack"><span class="tag" data-i18n="services.stackTag">Competenze e stack</span><h2 data-i18n="services.stackTitle">Una base ampia, usata in modo progettuale</h2><div class="tag-row"><span class="tag">C / C++</span><span class="tag">Assembly x86</span><span class="tag">Java</span><span class="tag">Python</span><span class="tag">Django</span><span class="tag">HTML / CSS / JS</span><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">MySQL</span><span class="tag">PostgreSQL</span><span class="tag">SQLite</span><span class="tag">Unity</span><span class="tag">Godot</span><span class="tag">.NET</span><span class="tag">Figma</span><span class="tag">Arduino</span></div><p class="muted" data-i18n="services.stackText">Le tecnologie non vengono presentate come semplice elenco, ma organizzate in funzione del prodotto da costruire: desktop, backend, frontend, database, UI, game dev o sistemi sperimentali.</p></div>
+    <div class="card stack"><span class="tag" data-i18n="services.approachTag">Metodo</span><h2 data-i18n="services.approachTitle">Come si sviluppa un progetto</h2><div class="timeline"><div class="timeline-item"><strong data-i18n="services.t1Title">Analisi e scoping</strong><span class="muted" data-i18n="services.t1Text">Obiettivi, utenti, vincoli e requisiti vengono chiariti fin dall’inizio.</span></div><div class="timeline-item"><strong data-i18n="services.t2Title">Progettazione architetturale</strong><span class="muted" data-i18n="services.t2Text">Si decide la struttura giusta: statico, desktop, backend, full-stack o prototipo interattivo.</span></div><div class="timeline-item"><strong data-i18n="services.t3Title">Sviluppo e validazione</strong><span class="muted" data-i18n="services.t3Text">Il progetto cresce per iterazioni, con attenzione a usabilità, qualità del codice e chiarezza tecnica.</span></div><div class="timeline-item"><strong data-i18n="services.t4Title">Documentazione e rilascio</strong><span class="muted" data-i18n="services.t4Text">Si prepara una base mantenibile, documentata e pronta per release, update e miglioramenti futuri.</span></div></div></div>
+  </div>
+</section>
+<section class="section-sm"><div class="container card stack center"><h2 class="section-title full-width" data-i18n="services.ctaTitle">Serve solo una vetrina o qualcosa di molto più strutturato?</h2><p class="section-subtitle centered-subtitle" data-i18n="services.ctaText">Kivaro Studios può partire da una singola pagina fino ad arrivare a software, sistemi completi, prototipi tecnici o prodotti interattivi più articolati.</p><div class="button-row center-buttons"><a class="btn btn-primary" href="projects.html" data-i18n="services.ctaPrimary">Guarda i progetti</a><a class="btn btn-secondary" href="contact.html" data-i18n="services.ctaSecondary">Richiedi informazioni</a></div></div></section>
+
+  </main>
+  <footer class="site-footer">
+    <div class="container site-footer-grid">
+      <div class="stack">
+        <a class="brand footer-brand" href="index.html">
+          <span class="brand-mark brand-mark--footer" aria-hidden="true">
+            <img src="assets/img/kivaro-footer-logo.png" alt=""/>
+          </span>
+          <span class="brand-text footer-brand-text"><span data-i18n="common.buildDesignIterate">Build, design, iterate.</span></span>
+        </a>
+        <p data-i18n="common.footerDescription">Studio indipendente di sviluppo software focalizzato su prodotti digitali, strumenti su misura e prototipi con una forte attenzione a qualità, chiarezza e design.</p>
+      </div>
+      <div>
+        <h3 data-i18n="common.explore">Esplora</h3>
+        <ul class="list-clean stack small">
+          <li><a href="services.html" data-i18n="common.services">Servizi</a></li>
+          <li><a href="projects.html" data-i18n="common.projects">Progetti</a></li>
+          <li><a href="labs.html" data-i18n="common.labs">Labs</a></li>
+          <li><a href="privacy.html" data-i18n="common.privacy">Privacy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 data-i18n="common.contacts">Contatti</h3>
+        <ul class="list-clean stack small">
+          <li><a href="mailto:kivaro.studios@gmail.com">kivaro.studios@gmail.com</a></li>
+          <li><a href="contact.html" data-i18n="common.requestInfo">Richiedi informazioni</a></li>
+          <li>© <span data-current-year></span> Kivaro Studios</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/site-data.js"></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

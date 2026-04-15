@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="#07111f" name="theme-color"/>
+<title>Kivaro Studios</title>
+<meta content="Kivaro Studios" name="description"/>
+<link href="assets/icons/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<script>(function(){try{var stored=localStorage.getItem("kivaro-theme");var theme=stored||(window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");document.documentElement.dataset.theme=theme;}catch(e){document.documentElement.dataset.theme="dark";}})();</script>
+<link href="assets/css/variables.css" rel="stylesheet"/>
+<link href="assets/css/base.css" rel="stylesheet"/>
+<link href="assets/css/components.css" rel="stylesheet"/>
+</head>
+<body data-page="about">
+<header class="site-header">
+<div class="container">
+<a class="brand" data-i18n-aria-label="aria.brandHome" href="index.html">
+<span aria-hidden="true" class="brand-mark">
+<img alt="" src="assets/img/kivaro-logo.png"/>
+</span>
+<span class="brand-text"><strong>Kivaro Studios</strong></span>
+</a>
+<nav class="nav" data-i18n-aria-label="aria.mainNavigation" data-nav="">
+<a data-i18n="nav.home" href="index.html">Home</a>
+<a data-i18n="nav.services" href="services.html">Servizi</a>
+<a data-i18n="nav.projects" href="projects.html">Progetti</a>
+<a data-i18n="nav.about" href="about.html">Chi siamo</a>
+<a data-i18n="nav.labs" href="labs.html">Labs</a>
+<a data-i18n="nav.contact" href="contact.html">Contatti</a>
+</nav>
+<div class="header-actions">
+<div class="segmented-control" data-i18n-aria-label="aria.themeSwitch" data-theme-switch="">
+<button data-theme-option="light" type="button"><span data-i18n="controls.theme.light">Chiaro</span></button>
+<button data-theme-option="dark" type="button"><span data-i18n="controls.theme.dark">Scuro</span></button>
+</div>
+<div class="segmented-control" data-i18n-aria-label="aria.languageSwitch" data-lang-switch="">
+<button data-lang-option="it" type="button"><span data-i18n="controls.lang.it">IT</span></button>
+<button data-lang-option="en" type="button"><span data-i18n="controls.lang.en">EN</span></button>
+</div>
+</div>
+<button aria-expanded="false" class="nav-toggle" data-i18n-aria-label="aria.openMenu" data-nav-toggle="" type="button">
+<svg fill="none" height="22" viewbox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 7H20" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path>
+<path d="M4 12H20" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path>
+<path d="M4 17H20" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path>
+</svg>
+</button>
+</div>
+</header>
+<main>
+<section class="page-hero"><div class="container"><span class="eyebrow" data-i18n="about.eyebrow">Chi siamo</span><h1 class="section-title" data-i18n="about.title">Kivaro Studios nasce fra software, laboratorio e voglia di costruire cose che funzionano davvero.</h1><p class="section-subtitle" data-i18n="about.subtitle">Dietro Kivaro Studios c’è Marco Mongelli: un percorso che unisce studio universitario, sperimentazione pratica, cultura tecnica, componente creativa e una sensibilità concreta nata prima nell’elettronica e nella programmazione embedded, e oggi arricchita anche da circa un anno come apprendista elettrico.</p></div></section>
+<section class="section-sm">
+  <div class="container">
+    <div class="about-carousel" data-about-carousel>
+      <button class="about-carousel__control about-carousel__control--prev" data-about-prev data-i18n-aria-label="about.carouselPrev" type="button" aria-label="Scorri a sinistra">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M14.5 5 8 12l6.5 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </button>
+      <div class="about-carousel__viewport">
+        <div class="about-card-scroller" data-card-scroller>
+          <article class="card stack about-rail-card"><span class="tag" data-i18n="about.storyTag">Origine</span><h2 data-i18n="about.storyTitle">Una passione nata molto presto</h2><p data-i18n="about.storyText">L’interesse per computer ed elettronica nasce da piccolo, anche grazie al contesto del laboratorio di riparazione elettronica e cellulari di famiglia. Da lì prende forma una curiosità costante per il funzionamento delle macchine e per il software come strumento di costruzione.</p></article>
+          <article class="card stack about-rail-card"><span class="tag" data-i18n="about.pathTag">Percorso</span><h2 data-i18n="about.pathTitle">Dal liceo scientifico all’università</h2><p data-i18n="about.pathText">Il percorso passa da corsi di robotica e programmazione, da Pascal e Access fino ad Arduino in C/C++, e poi si amplia all’università con strutture dati, architetture software, assembly x86, Java, Python, sviluppo web, database, interaction design, Unity con C# e progettazione multimediale.</p></article>
+          <article class="card stack about-rail-card"><span class="tag" data-i18n="about.electricTag">Founder mindset</span><h2 data-i18n="about.electricTitle">Dal banco da lavoro al software</h2><p data-i18n="about.electricText">Elettronica, embedded e circa un anno come apprendista elettrico hanno influenzato il modo di costruire software: fondamenta solide, collegamenti chiari e diagnosi dei problemi prima delle scorciatoie.</p></article>
+          <article class="card stack about-rail-card"><span class="tag" data-i18n="about.profileTag">Founder</span><h2 data-i18n="about.profileTitle">Marco</h2><p data-i18n="about.profileText">Studente del corso di Informatica e Tecnologie per la Produzione del Software all’Università degli Studi di Bari Aldo Moro, con interesse concreto per desktop software, web engineering, sistemi full-stack, game development, robotica, elettronica digitale, programmazione embedded, disegno 2D e un approccio pratico affinato oggi anche da circa un anno come apprendista elettrico.</p><div class="tag-row"><span class="tag">Software engineering</span><span class="tag">Interactive systems</span><span class="tag">Electrician mindset</span></div></article>
+          <article class="card stack about-rail-card"><span class="tag" data-i18n="about.craftTag">Traduzione pratica</span><h3 data-i18n="about.craft1Title">Ordine nei collegamenti</h3><p data-i18n="about.craft1Text">Che si tratti di cavi o componenti software, il principio resta simile: meno confusione, più leggibilità e manutenzione.</p></article>
+          <article class="card stack about-rail-card"><span class="tag" data-i18n="about.craftTag">Traduzione pratica</span><h3 data-i18n="about.craft2Title">Diagnosi prima della fretta</h3><p data-i18n="about.craft2Text">Capire dove nasce il problema evita fix improvvisati e aiuta a progettare con più lucidità.</p></article>
+          <article class="card stack about-rail-card"><span class="tag" data-i18n="about.craftTag">Traduzione pratica</span><h3 data-i18n="about.craft3Title">Rispetto per le fondamenta</h3><p data-i18n="about.craft3Text">Architettura, struttura dati, documentazione e interazione vengono curate perché sono ciò che tiene acceso il progetto nel tempo.</p></article>
+          <article class="card stack about-rail-card"><span class="tag" data-i18n="about.kpi1">Base teorica</span><h3 data-i18n="about.kpi1">Base teorica</h3><p data-i18n="about.kpi1Text">algoritmi, strutture dati, ingegneria del software, calcolo numerico</p></article>
+          <article class="card stack about-rail-card"><span class="tag" data-i18n="about.kpi2">Base progettuale</span><h3 data-i18n="about.kpi2">Base progettuale</h3><p data-i18n="about.kpi2Text">architetture, database, documentazione, interaction design, prototipi</p></article>
+          <article class="card stack about-rail-card"><span class="tag" data-i18n="about.kpi3">Base creativa</span><h3 data-i18n="about.kpi3">Base creativa</h3><p data-i18n="about.kpi3Text">arte 2D, contenuti multimediali, UI, videogiochi e identità visiva</p></article>
+        </div>
+      </div>
+      <button class="about-carousel__control about-carousel__control--next" data-about-next data-i18n-aria-label="about.carouselNext" type="button" aria-label="Scorri a destra">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M9.5 5 16 12l-6.5 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+<section class="section-sm"><div class="container card stack center"><h2 class="section-title full-width" data-i18n="about.ctaTitle">Kivaro Studios oggi è una realtà indipendente con un’identità tecnica più viva e riconoscibile.</h2><p class="section-subtitle centered-subtitle" data-i18n="about.ctaText">L’obiettivo non è solo mostrare competenze, ma costruire prodotti, strumenti e interfacce con metodo, personalità e quella precisione pratica che nasce da elettronica, embedded e da un percorso attuale come apprendista elettrico.</p><div class="button-row center-buttons"><a class="btn btn-primary" data-i18n="about.ctaPrimary" href="projects.html">Vedi i progetti</a><a class="btn btn-secondary" data-i18n="about.ctaSecondary" href="contact.html">Contatti</a></div></div></section>
+</main>
+<footer class="site-footer">
+<div class="container site-footer-grid">
+<div class="stack">
+<a class="brand footer-brand" href="index.html">
+          <span class="brand-mark brand-mark--footer" aria-hidden="true">
+            <img src="assets/img/kivaro-footer-logo.png" alt=""/>
+          </span>
+          <span class="brand-text footer-brand-text"><span data-i18n="common.buildDesignIterate">Build, design, iterate.</span></span>
+        </a>
+<p data-i18n="common.footerDescription">Studio indipendente di sviluppo software focalizzato su prodotti digitali, strumenti su misura e prototipi con una forte attenzione a qualità, chiarezza e design.</p>
+</div>
+<div>
+<h3 data-i18n="common.explore">Esplora</h3>
+<ul class="list-clean stack small">
+<li><a data-i18n="common.services" href="services.html">Servizi</a></li>
+<li><a data-i18n="common.projects" href="projects.html">Progetti</a></li>
+<li><a data-i18n="common.labs" href="labs.html">Labs</a></li>
+<li><a data-i18n="common.privacy" href="privacy.html">Privacy</a></li>
+</ul>
+</div>
+<div>
+<h3 data-i18n="common.contacts">Contatti</h3>
+<ul class="list-clean stack small">
+<li><a href="mailto:kivaro.studios@gmail.com">kivaro.studios@gmail.com</a></li>
+<li><a data-i18n="common.requestInfo" href="contact.html">Richiedi informazioni</a></li>
+<li>© <span data-current-year=""></span> Kivaro Studios</li>
+</ul>
+</div>
+</div>
+</footer>
+<script src="assets/js/site-data.js"></script>
+<script defer="" src="assets/js/main.js"></script>
+</body>
+</html>

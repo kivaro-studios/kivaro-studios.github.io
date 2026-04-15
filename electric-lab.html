@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kivaro Studios</title>
+  <meta name="description" content="Mini playground elettrico e interattivo di Kivaro Studios.">
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0f1021;
+      --surface: rgba(26, 21, 52, 0.92);
+      --surface-soft: rgba(255,255,255,0.05);
+      --text: #f7f7ff;
+      --muted: #c0c3df;
+      --primary: #7cf2ff;
+      --accent: #b8ff7b;
+      --secondary: #ff9b6a;
+      --violet: #c794ff;
+      --border: rgba(255,255,255,0.1);
+      --shadow: 0 24px 70px rgba(0,0,0,0.32);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(124,242,255,0.18), transparent 32%),
+        radial-gradient(circle at top right, rgba(255,155,106,0.14), transparent 28%),
+        linear-gradient(180deg, #0f1021, #12142a 55%, #0b0c17);
+      min-height: 100vh;
+      padding: 28px;
+    }
+    .shell {
+      width: min(1200px, 100%);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: 24px;
+    }
+    .panel {
+      border: 1px solid var(--border);
+      background: var(--surface);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .content {
+      padding: 24px;
+      display: grid;
+      gap: 16px;
+    }
+    h1, h2, h3, p { margin: 0; }
+    h1 { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 0.96; letter-spacing: -0.04em; }
+    p { color: var(--muted); line-height: 1.65; }
+    .tag, .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--surface-soft);
+      width: fit-content;
+    }
+    .note {
+      padding: 16px 18px;
+      border-left: 4px solid var(--secondary);
+      border-radius: 0 18px 18px 0;
+      background: rgba(255,155,106,0.1);
+    }
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .board {
+      min-height: 620px;
+      background:
+        radial-gradient(circle at top, rgba(124,242,255,0.12), transparent 32%),
+        linear-gradient(180deg, rgba(6,8,18,0.25), rgba(6,8,18,0.72));
+    }
+    svg { width: 100%; height: 100%; display: block; }
+    .info {
+      padding: 18px 20px 22px;
+      border-top: 1px solid var(--border);
+      display: grid;
+      gap: 12px;
+      background: rgba(255,255,255,0.03);
+    }
+    .mini-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .mini-card {
+      padding: 14px;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.04);
+    }
+    .node-label {
+      font-size: 13px;
+      font-weight: 700;
+      pointer-events: none;
+    }
+    @keyframes panel-shake {
+      0% { transform: translate(0, 0); }
+      15% { transform: translate(-5px, 4px); }
+      30% { transform: translate(5px, -4px); }
+      45% { transform: translate(-4px, 3px); }
+      60% { transform: translate(4px, -3px); }
+      75% { transform: translate(-2px, 2px); }
+      100% { transform: translate(0, 0); }
+    }
+    .board.is-shaking {
+      animation: panel-shake 0.35s ease-in-out;
+    }
+    @media (max-width: 960px) {
+      body { padding: 16px; }
+      .shell { grid-template-columns: 1fr; }
+      .board { min-height: 420px; }
+      .mini-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <section class="panel content">
+      <span class="tag">⚡ Kivaro Electric Lab</span>
+      <h1>Una versione più utile, più ordinata e più narrativa del playground elettrico.</h1>
+      <p>Questa pagina nasce come evoluzione del file elettrico originale: invece di nodi casuali, qui la rete racconta competenze, abitudini di lavoro e direzioni di ricerca di Kivaro Studios.</p>
+      <div class="note">Il founder porta nel digitale anche un approccio pratico nato da elettronica, embedded e circa un anno come apprendista elettrico: connessioni pulite, diagnosi prima della fretta e rispetto per ciò che tiene acceso davvero il sistema.</div>
+      <div class="legend">
+        <span class="pill">Nodi attivi = aree già in tensione</span>
+        <span class="pill">Nodi dormienti = clicca per accenderli</span>
+        <span class="pill">Puoi trascinare la rete</span>
+      </div>
+      <div class="mini-grid">
+        <div class="mini-card"><strong>Dal banco da lavoro al browser</strong><p>Una parte del tono del sito arriva da qui: meno rigidità, più personalità, ma senza perdere metodo.</p></div>
+        <div class="mini-card"><strong>Scintille informative</strong><p>Ogni nodo racconta una skill o una direzione concreta invece di restare puro effetto visivo.</p></div>
+        <div class="mini-card"><strong>Gioco controllato</strong><p>L’interazione resta leggera e divertente, ma il layout continua a essere leggibile e responsive.</p></div>
+      </div>
+    </section>
+    <section class="panel">
+      <div class="board"><svg viewBox="0 0 960 620" preserveAspectRatio="xMidYMid meet"></svg></div>
+      <div class="info">
+        <span class="tag">Nodo selezionato</span>
+        <h2 id="info-title">Scegli un nodo per vedere la descrizione</h2>
+        <p id="info-text">I nodi attivi generano una piccola scintilla. Quelli dormienti si attivano e rivelano un’altra parte del sistema.</p>
+      </div>
+    </section>
+  </div>
+  <script>
+    const svg = d3.select('svg');
+    const infoTitle = document.getElementById('info-title');
+    const infoText = document.getElementById('info-text');
+    const board = document.querySelector('.board');
+    const SHOCK_TRIGGER_CHANCE = 0.25; // 0.25 = 25%: cambia questo valore per regolare la probabilità della scossa
+    const zapSound = new Audio('assets/audio/electricity_zap_sound_effect.mp3');
+    zapSound.preload = 'auto';
+    const playZapSound = () => {
+      try {
+        zapSound.pause();
+        zapSound.currentTime = 0;
+        const playPromise = zapSound.play();
+        if (playPromise && typeof playPromise.catch === 'function') playPromise.catch(() => {});
+      } catch (_error) {
+        // ignora eventuali blocchi del browser sull'audio
+      }
+    };
+    const width = 960;
+    const height = 620;
+    const colors = {
+      cyan: '#7cf2ff',
+      orange: '#ff9b6a',
+      green: '#b8ff7b',
+      violet: '#c794ff'
+    };
+
+    const nodes = [
+      { id: 'Web UI', desc: 'Interfacce responsive, dettagli giocosi e struttura più viva.', group: 'cyan', powered: true },
+      { id: 'Backend', desc: 'API, logica e dati ordinati che sostengono la parte visibile.', group: 'cyan', powered: true },
+      { id: 'Desktop', desc: 'Tool locali e software operativi pensati per il lavoro reale.', group: 'orange', powered: true },
+      { id: 'Game Systems', desc: 'Interazione, logiche di gioco e componenti dinamici.', group: 'violet', powered: true },
+      { id: 'UX Flow', desc: 'Flussi leggibili, gerarchie chiare e scelte più intuitive.', group: 'cyan', powered: true },
+      { id: 'Robotica', desc: 'Prototipi, automazioni e sistemi che escono dallo schermo.', group: 'green', powered: false },
+      { id: 'Elettronica', desc: 'Circuiti, collegamenti, logica digitale e sensibilità pratica da elettricista.', group: 'green', powered: true },
+      { id: 'Prototype', desc: 'Test veloci e idee che devono dimostrare di meritare spazio.', group: 'orange', powered: false },
+      { id: 'Diagnostica', desc: 'Prima si cerca la causa, poi si tocca il sistema.', group: 'violet', powered: false },
+      { id: 'Surprise', desc: 'Micro-interazioni, dettagli buffi e tocchi creativi che danno ritmo.', group: 'orange', powered: false }
+    ];
+
+    const links = [
+      ['Web UI', 'UX Flow'],
+      ['Web UI', 'Backend'],
+      ['Backend', 'Desktop'],
+      ['Backend', 'Prototype'],
+      ['Desktop', 'Diagnostica'],
+      ['Diagnostica', 'Elettronica'],
+      ['Elettronica', 'Robotica'],
+      ['Game Systems', 'UX Flow'],
+      ['Game Systems', 'Surprise'],
+      ['Prototype', 'Surprise'],
+      ['Elettronica', 'Web UI'],
+      ['Robotica', 'Prototype']
+    ].map(([source, target]) => ({ source, target }));
+
+    const defs = svg.append('defs');
+    const gradient = defs.append('linearGradient').attr('id', 'standalone-grad').attr('x1', '0%').attr('y1', '0%').attr('x2', '100%').attr('y2', '100%');
+    gradient.append('stop').attr('offset', '0%').attr('stop-color', colors.cyan);
+    gradient.append('stop').attr('offset', '100%').attr('stop-color', colors.orange);
+
+    const container = svg.append('g');
+    const linkLayer = container.append('g');
+    const sparkLayer = container.append('g');
+    const nodeLayer = container.append('g');
+
+    const simulation = d3.forceSimulation(nodes)
+      .force('link', d3.forceLink(links).id(d => d.id).distance(155).strength(0.54))
+      .force('charge', d3.forceManyBody().strength(-310))
+      .force('center', d3.forceCenter(width / 2, height / 2))
+      .force('collision', d3.forceCollide().radius(45));
+
+    const link = linkLayer.selectAll('line')
+      .data(links)
+      .enter()
+      .append('line')
+      .attr('stroke', 'url(#standalone-grad)')
+      .attr('stroke-width', 2.2)
+      .attr('opacity', 0.34)
+      .attr('stroke-linecap', 'round');
+
+    const node = nodeLayer.selectAll('g')
+      .data(nodes)
+      .enter()
+      .append('g');
+
+    const circle = node.append('circle').attr('r', 15).attr('stroke-width', 2.4).style('cursor', 'pointer');
+    const halo = node.append('circle').attr('r', 23).attr('fill', 'none').attr('stroke-width', 1.5).attr('opacity', 0.25).attr('pointer-events', 'none');
+    const label = node.append('text').attr('class', 'node-label').attr('text-anchor', 'middle').attr('dy', 38).text(d => d.id);
+
+    function refreshStyles() {
+      circle
+        .attr('fill', d => d.powered ? colors[d.group] : 'rgba(255,255,255,0.04)')
+        .attr('stroke', d => d.powered ? colors[d.group] : 'rgba(255,255,255,0.22)');
+      halo
+        .attr('stroke', d => d.powered ? colors[d.group] : 'rgba(255,255,255,0.12)')
+        .attr('opacity', d => d.powered ? 0.55 : 0.15);
+      label
+        .attr('fill', d => d.powered ? '#f7f7ff' : '#c0c3df')
+        .attr('opacity', d => d.powered ? 1 : 0.82);
+    }
+
+    function burst(nodeData) {
+      circle
+        .filter(item => item === nodeData)
+        .transition().duration(200).attr('fill', '#9fd3ff')
+        .transition().duration(300).attr('fill', colors[nodeData.group]);
+
+      if (board) {
+        board.classList.remove('is-shaking');
+        void board.offsetWidth;
+        board.classList.add('is-shaking');
+        window.setTimeout(() => board.classList.remove('is-shaking'), 360);
+      }
+
+      playZapSound();
+
+      const sparkCount = 14;
+      for (let i = 0; i < sparkCount; i += 1) {
+        const segments = 4 + Math.floor(Math.random() * 3);
+        const distance = 46 + Math.random() * 54;
+        const angle = Math.random() * Math.PI * 2;
+        const points = [{ x: nodeData.x, y: nodeData.y }];
+
+        for (let segment = 1; segment <= segments; segment += 1) {
+          points.push({
+            x: nodeData.x + Math.cos(angle) * ((distance * segment) / segments) + (Math.random() - 0.5) * 24,
+            y: nodeData.y + Math.sin(angle) * ((distance * segment) / segments) + (Math.random() - 0.5) * 24
+          });
+        }
+
+        const lineBuilder = d3.line().x(point => point.x).y(point => point.y).curve(d3.curveLinear);
+        const spark = sparkLayer.append('path')
+          .attr('d', lineBuilder(points))
+          .attr('fill', 'none')
+          .attr('stroke', '#9fd3ff')
+          .attr('stroke-width', 2)
+          .attr('stroke-linecap', 'round')
+          .attr('opacity', 1);
+
+        const length = spark.node().getTotalLength();
+        spark
+          .attr('stroke-dasharray', length)
+          .attr('stroke-dashoffset', length)
+          .transition().duration(210).ease(d3.easeCubicOut).attr('stroke-dashoffset', 0)
+          .transition().duration(150).ease(d3.easeCubicIn).attr('opacity', 0).remove();
+
+        sparkLayer.append('path')
+          .attr('d', lineBuilder(points.slice(-2)))
+          .attr('fill', 'none')
+          .attr('stroke', '#ffffff')
+          .attr('stroke-width', 2.5)
+          .attr('stroke-linecap', 'round')
+          .attr('opacity', 1)
+          .transition().duration(240).ease(d3.easeCubicOut).attr('opacity', 0).remove();
+      }
+    }
+
+    node.on('click', (_, d) => {
+      d.powered = true;
+      infoTitle.textContent = d.id;
+      infoText.textContent = d.desc;
+      refreshStyles();
+
+      const shockTriggered = Math.random() < SHOCK_TRIGGER_CHANCE;
+      if (shockTriggered) {
+        burst(d);
+      }
+    });
+
+    node.call(
+      d.powered = true;
+      infoTitle.textContent = d.id;
+      infoText.textContent = d.desc;
+      refreshStyles();
+      burst(d);
+    });
+
+    node.call(
+      d3.drag()
+        .on('start', (event, d) => {
+          if (!event.active) simulation.alphaTarget(0.25).restart();
+          d.fx = d.x;
+          d.fy = d.y;
+        })
+        .on('drag', (event, d) => {
+          d.fx = event.x;
+          d.fy = event.y;
+        })
+        .on('end', (event, d) => {
+          if (!event.active) simulation.alphaTarget(0);
+          d.fx = null;
+          d.fy = null;
+        })
+    );
+
+    simulation.on('tick', () => {
+      link
+        .attr('x1', d => d.source.x)
+        .attr('y1', d => d.source.y)
+        .attr('x2', d => d.target.x)
+        .attr('y2', d => d.target.y);
+      node.attr('transform', d => `translate(${d.x},${d.y})`);
+    });
+
+    refreshStyles();
+  </script>
+</body>
+</html>

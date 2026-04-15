@@ -1,0 +1,45 @@
+.feature-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: var(--space-5);
+}
+.process-step {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.process-step-number {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--secondary) 16%, transparent), color-mix(in srgb, var(--primary) 14%, transparent));
+  color: var(--secondary);
+  border: 1px solid color-mix(in srgb, var(--secondary) 24%, transparent);
+}
+.playful-hero .hero-copy {
+  display: grid;
+  gap: 1.1rem;
+}
+.power-panel {
+  transform: rotate(1.5deg);
+}
+.power-panel .tag-row {
+  margin-top: 1.25rem;
+}
+.playful-cards .card:nth-child(2n) {
+  transform: rotate(-0.75deg);
+}
+.playful-cards .card:nth-child(2n + 1) {
+  transform: rotate(0.75deg);
+}
+@media (max-width: 960px) {
+  .feature-grid { grid-template-columns: 1fr; }
+  .power-panel,
+  .playful-cards .card:nth-child(n) {
+    transform: none;
+  }
+}

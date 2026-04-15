@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07111f">
+  <title>Kivaro Studios</title>
+  <meta name="description" content="Kivaro Studios">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>(function(){try{var stored=localStorage.getItem("kivaro-theme");var theme=stored||(window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");document.documentElement.dataset.theme=theme;}catch(e){document.documentElement.dataset.theme="dark";}})();</script>
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+</head>
+<body data-page="projects">
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html" data-i18n-aria-label="aria.brandHome">
+        <span class="brand-mark" aria-hidden="true">
+          <img src="assets/img/kivaro-logo.png" alt=""/>
+        </span>
+        <span class="brand-text"><strong>Kivaro Studios</strong></span>
+      </a>
+      <nav class="nav" data-nav data-i18n-aria-label="aria.mainNavigation">
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="services.html" data-i18n="nav.services">Servizi</a>
+        <a href="projects.html" data-i18n="nav.projects">Progetti</a>
+        <a href="about.html" data-i18n="nav.about">Chi siamo</a>
+        <a href="labs.html" data-i18n="nav.labs">Labs</a>
+        <a href="contact.html" data-i18n="nav.contact">Contatti</a>
+      </nav>
+      <div class="header-actions">
+        <div class="segmented-control" data-theme-switch data-i18n-aria-label="aria.themeSwitch">
+          <button type="button" data-theme-option="light"><span data-i18n="controls.theme.light">Chiaro</span></button>
+          <button type="button" data-theme-option="dark"><span data-i18n="controls.theme.dark">Scuro</span></button>
+        </div>
+        <div class="segmented-control" data-lang-switch data-i18n-aria-label="aria.languageSwitch">
+          <button type="button" data-lang-option="it"><span data-i18n="controls.lang.it">IT</span></button>
+          <button type="button" data-lang-option="en"><span data-i18n="controls.lang.en">EN</span></button>
+        </div>
+      </div>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" data-i18n-aria-label="aria.openMenu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 7H20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M4 12H20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M4 17H20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+  <main>
+
+<section class="page-hero"><div class="container"><span class="eyebrow" data-i18n="projects.eyebrow">Progetti</span><h1 class="section-title" data-i18n="projects.title">Progetti che uniscono struttura tecnica, prodotto e collaborazione.</h1><p class="section-subtitle" data-i18n="projects.subtitle">Il portfolio distingue tra prodotti sviluppati internamente da Kivaro Studios e collaborazioni realizzate con partner esterni. The Yellow Abyss e Health4Paws non sono progetti interni: sono collaborazioni sviluppate con il gruppo Technomancers.</p></div></section>
+<section class="section-sm"><div class="container"><span class="eyebrow" data-i18n="projects.internalEyebrow">Progetti interni</span><h2 class="section-title" data-i18n="projects.internalTitle">Prodotti costruiti direttamente da Kivaro Studios</h2><p class="section-subtitle" data-i18n="projects.internalSubtitle">Questa sezione raccoglie i progetti sviluppati come iniziative interne, con controllo diretto su strategia, sviluppo e direzione evolutiva.</p><div class="grid two-col">
+  <article class="card stack"><div class="project-visual project-visual--image project-visual--cover"><img class="project-visual__img" src="assets/img/flimbox-logo.png" alt="FlimBox logo"></div><span class="tag" data-i18n="projects.flimboxTag">Desktop software</span><h2 data-i18n="projects.flimboxTitle">FlimBox</h2><p data-i18n="projects.flimboxText">Software desktop in .NET per la gestione flessibile di dati tabellari aziendali, pensato per semplificare processi operativi, organizzazione delle informazioni e continuità evolutiva del prodotto.</p><div class="tag-row"><span class="tag">.NET Desktop</span><span class="tag">Operational workflows</span><span class="tag">Product roadmap</span></div><a class="btn btn-primary" href="projects/flimbox.html" data-i18n="projects.flimboxLink">Apri il progetto FlimBox</a></article>
+  <article class="card stack"><div class="project-visual" aria-hidden="true"></div><span class="tag" data-i18n="projects.protoTag">R&amp;D</span><h2 data-i18n="projects.protoTitle">Tool, concept e prototipi custom</h2><p data-i18n="projects.protoText">Esperimenti su architetture, utility, flussi di interfaccia, automazioni, sistemi interattivi e idee da far evolvere in prodotti futuri.</p><div class="tag-row"><span class="tag">Python</span><span class="tag">.NET</span><span class="tag">Labs</span></div></article>
+</div></div></section>
+<section class="section-sm"><div class="container"><span class="eyebrow" data-i18n="projects.collabEyebrow">Collaborazioni</span><h2 class="section-title" data-i18n="projects.collabTitle">Progetti sviluppati insieme a Technomancers</h2><p class="section-subtitle" data-i18n="projects.collabSubtitle">Health4Paws e The Yellow Abyss fanno parte dell’area collaborazioni: Kivaro Studios ha contribuito allo sviluppo e alla presentazione del progetto insieme al gruppo Technomancers.</p><div class="grid two-col">
+  <article class="card stack"><div class="project-visual project-visual--image project-visual--cover media-frame--wide"><img class="project-visual__img" src="assets/img/health4paws-logo.png" alt="Health4Paws logo"></div><span class="tag" data-i18n="projects.healthTag">Collaborazione</span><h2 data-i18n="projects.healthTitle">Health4Paws</h2><p data-i18n="projects.healthText">Piattaforma e-health sviluppata in collaborazione con Technomancers per connettere proprietari di animali e professionisti in un ecosistema condiviso di salute, promemoria e servizi.</p><div class="tag-row"><span class="tag">Technomancers</span><span class="tag">E-health</span><span class="tag">Shared care</span></div><a class="btn btn-primary" href="projects/health4paws.html" data-i18n="projects.healthLink">Apri il progetto Health4Paws</a></article>
+  <article class="card stack"><div class="project-visual project-visual--image project-visual--cover media-frame--wide"><img class="project-visual__img" src="assets/img/the-yellow-abyss-logo.png" alt="The Yellow Abyss artwork"></div><span class="tag" data-i18n="projects.yellowTag">Collaborazione</span><h2 data-i18n="projects.yellowTitle">The Yellow Abyss</h2><p data-i18n="projects.yellowText">Videogioco roguelike e sito multimediale sviluppati in collaborazione con Technomancers, con focus su worldbuilding, presentazione narrativa e identità visiva del progetto.</p><div class="tag-row"><span class="tag">Technomancers</span><span class="tag">Unity</span><span class="tag">Game &amp; web</span></div><a class="btn btn-primary" href="projects/the-yellow-abyss.html" data-i18n="projects.yellowLink">Apri il progetto The Yellow Abyss</a></article>
+</div></div></section>
+<section class="section-sm"><div class="container grid two-col"><article class="card stack"><span class="tag" data-i18n="projects.timelineTag">Evoluzione</span><h2 data-i18n="projects.timelineTitle">Come crescono i progetti</h2><div class="timeline"><div class="timeline-item"><strong data-i18n="projects.timeline1Title">Ricerca e contesto</strong><span class="muted" data-i18n="projects.timeline1Text">Si parte da un bisogno concreto, da un’ipotesi o da un concept da validare.</span></div><div class="timeline-item"><strong data-i18n="projects.timeline2Title">Progettazione</strong><span class="muted" data-i18n="projects.timeline2Text">Architettura, dati, interfacce e contenuti vengono messi in ordine prima di costruire.</span></div><div class="timeline-item"><strong data-i18n="projects.timeline3Title">Sviluppo</strong><span class="muted" data-i18n="projects.timeline3Text">Il progetto prende forma con stack e strumenti coerenti con l’obiettivo.</span></div><div class="timeline-item"><strong data-i18n="projects.timeline4Title">Release e iterazione</strong><span class="muted" data-i18n="projects.timeline4Text">Dopo il rilascio si lavora su update, fix, miglioramenti e possibili estensioni.</span></div></div></article><article class="card stack center"><h2 class="section-title full-width" data-i18n="projects.ctaTitle">Vuoi trasformare un’idea in qualcosa di concreto e presentabile?</h2><p class="section-subtitle centered-subtitle" data-i18n="projects.ctaText">Kivaro Studios può aiutarti a dare struttura tecnica, narrativa e visiva a un progetto in fase iniziale o già in evoluzione.</p><div class="button-row center-buttons"><a class="btn btn-primary" href="contact.html" data-i18n="projects.ctaPrimary">Contatta Kivaro</a><a class="btn btn-secondary" href="services.html" data-i18n="projects.ctaSecondary">Esplora i servizi</a></div></article></div></section>
+
+  </main>
+  <footer class="site-footer">
+    <div class="container site-footer-grid">
+      <div class="stack">
+        <a class="brand footer-brand" href="index.html">
+          <span class="brand-mark brand-mark--footer" aria-hidden="true">
+            <img src="assets/img/kivaro-footer-logo.png" alt=""/>
+          </span>
+          <span class="brand-text footer-brand-text"><span data-i18n="common.buildDesignIterate">Build, design, iterate.</span></span>
+        </a>
+        <p data-i18n="common.footerDescription">Studio indipendente di sviluppo software focalizzato su prodotti digitali, strumenti su misura e prototipi con una forte attenzione a qualità, chiarezza e design.</p>
+      </div>
+      <div>
+        <h3 data-i18n="common.explore">Esplora</h3>
+        <ul class="list-clean stack small">
+          <li><a href="services.html" data-i18n="common.services">Servizi</a></li>
+          <li><a href="projects.html" data-i18n="common.projects">Progetti</a></li>
+          <li><a href="labs.html" data-i18n="common.labs">Labs</a></li>
+          <li><a href="privacy.html" data-i18n="common.privacy">Privacy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 data-i18n="common.contacts">Contatti</h3>
+        <ul class="list-clean stack small">
+          <li><a href="mailto:kivaro.studios@gmail.com">kivaro.studios@gmail.com</a></li>
+          <li><a href="contact.html" data-i18n="common.requestInfo">Richiedi informazioni</a></li>
+          <li>© <span data-current-year></span> Kivaro Studios</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/site-data.js"></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="#07111f" name="theme-color"/>
+<title>Kivaro Studios</title>
+<meta content="Kivaro Studios" name="description"/>
+<link href="assets/icons/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<script>(function(){try{var stored=localStorage.getItem("kivaro-theme");var theme=stored||(window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");document.documentElement.dataset.theme=theme;}catch(e){document.documentElement.dataset.theme="dark";}})();</script>
+<link href="assets/css/variables.css" rel="stylesheet"/>
+<link href="assets/css/base.css" rel="stylesheet"/>
+<link href="assets/css/components.css" rel="stylesheet"/>
+</head>
+<body data-page="labs">
+<header class="site-header">
+<div class="container">
+<a class="brand" data-i18n-aria-label="aria.brandHome" href="index.html">
+<span aria-hidden="true" class="brand-mark">
+<img alt="" src="assets/img/kivaro-logo.png"/>
+</span>
+<span class="brand-text"><strong>Kivaro Studios</strong></span>
+</a>
+<nav class="nav" data-i18n-aria-label="aria.mainNavigation" data-nav="">
+<a data-i18n="nav.home" href="index.html">Home</a>
+<a data-i18n="nav.services" href="services.html">Servizi</a>
+<a data-i18n="nav.projects" href="projects.html">Progetti</a>
+<a data-i18n="nav.about" href="about.html">Chi siamo</a>
+<a data-i18n="nav.labs" href="labs.html">Labs</a>
+<a data-i18n="nav.contact" href="contact.html">Contatti</a>
+</nav>
+<div class="header-actions">
+<div class="segmented-control" data-i18n-aria-label="aria.themeSwitch" data-theme-switch="">
+<button data-theme-option="light" type="button"><span data-i18n="controls.theme.light">Chiaro</span></button>
+<button data-theme-option="dark" type="button"><span data-i18n="controls.theme.dark">Scuro</span></button>
+</div>
+<div class="segmented-control" data-i18n-aria-label="aria.languageSwitch" data-lang-switch="">
+<button data-lang-option="it" type="button"><span data-i18n="controls.lang.it">IT</span></button>
+<button data-lang-option="en" type="button"><span data-i18n="controls.lang.en">EN</span></button>
+</div>
+</div>
+<button aria-expanded="false" class="nav-toggle" data-i18n-aria-label="aria.openMenu" data-nav-toggle="" type="button">
+<svg fill="none" height="22" viewbox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 7H20" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path>
+<path d="M4 12H20" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path>
+<path d="M4 17H20" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path>
+</svg>
+</button>
+</div>
+</header>
+<main>
+<section class="page-hero"><div class="container"><span class="eyebrow" data-i18n="labs.eyebrow">Labs</span><h1 class="section-title" data-i18n="labs.title">Il laboratorio dove le idee fanno scintille prima di diventare prodotti.</h1><p class="section-subtitle" data-i18n="labs.subtitle">Labs non raccoglie idee vaghe: ospita prove, prototipi e direzioni future su software verticali, sistemi interattivi, videogiochi, interfacce, robotica ed elettronica digitale.</p></div></section>
+<section class="section-sm"><div class="container"><div class="labs-carousel" data-labs-carousel><div class="labs-carousel__viewport"><div class="labs-carousel__track" data-labs-track><article class="card stack labs-carousel__slide"><span class="tag" data-i18n="labs.l1Tag">Software R&amp;D</span><h2 data-i18n="labs.l1Title">Tool verticali e sistemi interni</h2><p data-i18n="labs.l1Text">Concept per applicazioni operative, gestionali leggeri, pannelli, utility e software costruiti attorno a casi d’uso reali.</p></article><article class="card stack labs-carousel__slide"><span class="tag" data-i18n="labs.l2Tag">Interaction</span><h2 data-i18n="labs.l2Title">Prototipi di interfaccia e flow design</h2><p data-i18n="labs.l2Text">Esperimenti su dashboard, sistemi di navigazione, UI responsive, UX flow, documentazione visuale e interazioni da validare prima del build completo.</p></article><article class="card stack labs-carousel__slide"><span class="tag" data-i18n="labs.l3Tag">Creative tech</span><h2 data-i18n="labs.l3Title">Game concept e multimedia</h2><p data-i18n="labs.l3Text">Prove su gameplay, siti multimediali, worldbuilding, presentazioni interattive, art direction e prodotti digitali con forte identità narrativa.</p></article><article class="card stack labs-carousel__slide"><span class="tag" data-i18n="labs.l4Tag">Hardware + software</span><h2 data-i18n="labs.l4Title">Robotica ed elettronica digitale</h2><p data-i18n="labs.l4Text">Spazio per idee che intrecciano logica, microcontrollori, sensori, automazione e codice, con un approccio integrato tra hardware e software.</p></article></div></div><div class="labs-carousel__dots" data-labs-dots aria-label="Labs carousel pagination"></div></div></div></section>
+<section class="section-sm"><div class="container electric-lab-shell"><div class="stack"><span class="eyebrow" data-i18n="labs.electricEyebrow">Electric playground</span><h2 class="section-title" data-i18n="labs.electricTitle">Una rete interattiva che racconta come lavora Kivaro</h2><p class="section-subtitle" data-i18n="labs.electricText">Questa sezione reinterpreta il playground elettrico in una versione più utile: i nodi rappresentano competenze, aree di progetto e abitudini di lavoro. Tocca la rete per vedere un corto circuito visivo e leggere come un percorso nato nell’elettronica e nell’embedded, oggi affiancato da circa un anno come apprendista elettrico, si riflette anche nel modo di progettare software.</p><div class="electric-card-note"><strong>⚡</strong> <span data-i18n="labs.electricFounderNote">È un piccolo ponte fra hardware, logica e prodotto digitale: meno decorazione gratuita, più energia messa al posto giusto.</span></div><div class="electric-legend"><span class="tag" data-i18n="labs.electricLegendActive">Nodi carichi = competenze già in tensione</span><span class="tag" data-i18n="labs.electricLegendDormant">Nodi dormienti = aree da risvegliare con un click</span><span class="tag" data-i18n="labs.electricLegendDrag">Puoi cliccare e trascinare la rete</span></div></div><div class="card electric-board-shell" data-electric-lab=""><div class="electric-board"><svg aria-hidden="true"></svg></div><div class="electric-info-card"><span class="tag" data-i18n="labs.electricInfoTag">Nodo selezionato</span><h3 data-electric-info-title="" data-i18n="labs.electricInfoDefaultTitle">Scegli un nodo per vedere che succede</h3><p data-electric-info-text="" data-i18n="labs.electricInfoDefaultText">I nodi carichi fanno partire piccole scintille e raccontano una competenza già presente. I nodi dormienti si attivano e mostrano direzioni di ricerca, prototipi o abitudini di lavoro.</p></div></div></div></section>
+<section class="section-sm"><div class="container grid two-col"><article class="card stack"><span class="tag" data-i18n="labs.visionTag">Perché esiste</span><h2 data-i18n="labs.visionTitle">Labs serve a trasformare intuizioni in direzioni verificabili</h2><p data-i18n="labs.visionText">Non tutte le idee devono nascere già come prodotti completi. Alcune vanno esplorate, documentate, prototipate e testate. Labs è il punto in cui Kivaro organizza questa fase in modo serio, così che le sperimentazioni possano diventare roadmap future.</p></article><article class="card stack"><span class="tag" data-i18n="labs.roadmapTag">Metodo Labs</span><h2 data-i18n="labs.roadmapTitle">Come vengono trattate le idee</h2><div class="timeline"><div class="timeline-item"><strong data-i18n="labs.r1Title">Raccolta e studio</strong><span class="muted" data-i18n="labs.r1Text">L’idea viene osservata dal punto di vista tecnico, funzionale e visivo.</span></div><div class="timeline-item"><strong data-i18n="labs.r2Title">Prototipo e documentazione</strong><span class="muted" data-i18n="labs.r2Text">Si costruisce una prima base concreta, accompagnata da note, flussi e struttura.</span></div><div class="timeline-item"><strong data-i18n="labs.r3Title">Validazione e direzione</strong><span class="muted" data-i18n="labs.r3Text">Si decide se far crescere il concept in progetto pubblico, prodotto interno o nuova linea sperimentale.</span></div></div></article></div></section>
+<section class="section-sm"><div class="container card stack center"><h2 class="section-title full-width" data-i18n="labs.ctaTitle">Labs è il motore che tiene viva la parte più ambiziosa e curiosa di Kivaro.</h2><p class="section-subtitle centered-subtitle" data-i18n="labs.ctaText">Mostra che dietro i progetti già presentati esiste una ricerca continua su strumenti, giochi, sistemi interattivi e tecnologie da far maturare nel tempo.</p><div class="button-row center-buttons"><a class="btn btn-primary" data-i18n="labs.ctaPrimary" href="projects.html">Scopri i progetti</a><a class="btn btn-secondary" data-i18n="labs.ctaSecondary" href="contact.html">Scrivi a Kivaro</a></div></div></section>
+</main>
+<footer class="site-footer">
+<div class="container site-footer-grid">
+<div class="stack">
+<a class="brand footer-brand" href="index.html">
+          <span class="brand-mark brand-mark--footer" aria-hidden="true">
+            <img src="assets/img/kivaro-footer-logo.png" alt=""/>
+          </span>
+          <span class="brand-text footer-brand-text"><span data-i18n="common.buildDesignIterate">Build, design, iterate.</span></span>
+        </a>
+<p data-i18n="common.footerDescription">Studio indipendente di sviluppo software focalizzato su prodotti digitali, strumenti su misura e prototipi con una forte attenzione a qualità, chiarezza e design.</p>
+</div>
+<div>
+<h3 data-i18n="common.explore">Esplora</h3>
+<ul class="list-clean stack small">
+<li><a data-i18n="common.services" href="services.html">Servizi</a></li>
+<li><a data-i18n="common.projects" href="projects.html">Progetti</a></li>
+<li><a data-i18n="common.labs" href="labs.html">Labs</a></li>
+<li><a data-i18n="common.privacy" href="privacy.html">Privacy</a></li>
+</ul>
+</div>
+<div>
+<h3 data-i18n="common.contacts">Contatti</h3>
+<ul class="list-clean stack small">
+<li><a href="mailto:kivaro.studios@gmail.com">kivaro.studios@gmail.com</a></li>
+<li><a data-i18n="common.requestInfo" href="contact.html">Richiedi informazioni</a></li>
+<li>© <span data-current-year=""></span> Kivaro Studios</li>
+</ul>
+</div>
+</div>
+</footer>
+<script src="assets/js/site-data.js"></script>
+<script defer="True" src="https://d3js.org/d3.v7.min.js"></script><script defer="" src="assets/js/main.js"></script>
+</body>
+</html>
